@@ -1,0 +1,13 @@
+{
+  "name": "diario-estudio",
+  "version": "2.0.0",
+  "description": "Diario de Estudio con Mapa de Calor - Clase 2",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "start": "npx serve ."
+  },
+  "keywords": [],
+  "author": "I.S.F.T. N° 151",
+  "license": "ISC"
+}
