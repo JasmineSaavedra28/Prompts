@@ -1,0 +1,1 @@
+✅ Siempre: actualizar `MEMORY.md` al terminar cada tarea.

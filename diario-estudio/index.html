@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diario de Estudio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="container">
+      <h1>📚 Diario de Estudio</h1>
+      <p class="subtitle">Registra tu progreso y mantén viva tu motivación diaria</p>
+    </div>
+  </header>
+
+  <main class="container main-layout">
+    <!-- Panel de Rachas -->
+    <section class="streaks-section" aria-label="Estadísticas de racha">
+      <div class="card streak-card current-streak">
+        <span class="streak-icon" aria-hidden="true">🔥</span>
+        <div class="streak-data">
+          <span class="streak-label">Racha Actual</span>
+          <span class="streak-number" id="currentStreakDisplay">0</span>
+          <span class="streak-unit" id="currentStreakUnit">días consecutivos</span>
+        </div>
+      </div>
+
+      <div class="card streak-card best-streak">
+        <span class="streak-icon" aria-hidden="true">🏆</span>
+        <div class="streak-data">
+          <span class="streak-label">Mejor Racha Histórica</span>
+          <span class="streak-number" id="bestStreakDisplay">0</span>
+          <span class="streak-unit" id="bestStreakUnit">días récord</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulario de Registro -->
+    <section class="card form-section">
+      <h2>Registrar Nueva Sesión</h2>
+      <form id="sessionForm" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="sessionDate">Fecha</label>
+            <input type="date" id="sessionDate" name="date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="sessionSubject">Materia</label>
+            <input type="text" id="sessionSubject" name="subject" placeholder="Ej: Algoritmos III" required>
+          </div>
+
+          <div class="form-group">
+            <label for="sessionTopic">Tema</label>
+            <input type="text" id="sessionTopic" name="topic" placeholder="Ej: Árboles Binarios" required>
+          </div>
+
+          <div class="form-group">
+            <label for="sessionMinutes">Minutos estudiados</label>
+            <input type="number" id="sessionMinutes" name="minutes" min="1" max="1440" placeholder="Ej: 45" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="btnSubmit">
+          ➕ Guardar Sesión
+        </button>
+      </form>
+    </section>
+
+    <!-- Historial de Sesiones -->
+    <section class="card history-section">
+      <div class="history-header">
+        <h2>Historial de Sesiones</h2>
+        <span class="badge" id="sessionCountBadge">0 sesiones</span>
+      </div>
+
+      <div id="emptyHistory" class="empty-state">
+        <p>Aún no registraste ninguna sesión de estudio.</p>
+        <p class="empty-subtext">¡Completa el formulario arriba para encender tu racha!</p>
+      </div>
+
+      <ul id="sessionList" class="session-list" aria-label="Lista de sesiones de estudio"></ul>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <div class="container">
+      <p>I.S.F.T. N° 151 · Algoritmos y Estructuras de Datos III · Módulo 1</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
