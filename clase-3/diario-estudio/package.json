@@ -1,0 +1,13 @@
+{
+  "name": "diario-estudio",
+  "version": "3.0.0",
+  "description": "Diario de Estudio con mapa de calor y objetivo semanal - Clase 3",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "start": "npx serve ."
+  },
+  "keywords": [],
+  "author": "I.S.F.T. N° 151",
+  "license": "ISC"
+}
